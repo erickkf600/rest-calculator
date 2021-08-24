@@ -17,7 +17,7 @@ Foi feito também implementação de tema dark
 
 ### LIGHT
 <p float="left" align="center">
-<img src="./src/assets/preview/light.png" alt="Preview" width="75%">
+<img src="./src/assets/preview/light.PNG" alt="Preview" width="75%">
 <img src="./src/assets/preview/light-mobile.PNG" alt="Preview" width="15%">
 </p>
 
