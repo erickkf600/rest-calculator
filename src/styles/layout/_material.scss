@@ -24,7 +24,7 @@
 .input-default {
    width: 100%;
    @include respond-to('medium') {
-      width: 126px;
+      width: 9vw;
    }
    .mat-form-field-flex {
       background: $gray !important;
