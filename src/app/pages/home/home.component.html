@@ -1,0 +1,112 @@
+<section class="home">
+   <div class="mat-card home__card">
+      <h2>Teste Audaces</h2>
+
+      <form [formGroup]="validaFormGroup" class="home__sequencies">
+         <ng-container formArrayName="sequencies">
+            <div class="home__row">
+               <p>Sequência:</p>
+               <div class="home__row-grid">
+                  <ng-container
+                     *ngFor="
+                        let acquiterCombine of combines.controls;
+                        let i = index
+                     "
+                  >
+                     <ng-container [formGroupName]="i">
+                        <mat-form-field appearance="fill" class="input-default">
+                           <mat-label>Número {{ i + 1 }}</mat-label>
+                           <input
+                              matInput
+                              type="number"
+                              formControlName="numbers"
+                           />
+                        </mat-form-field>
+                     </ng-container>
+                  </ng-container>
+
+                  <button
+                     class="home__add dark-theme clear"
+                     *ngIf="combines.controls.length <= 9"
+                     (click)="addInput()"
+                  >
+                     <span class="icon-add"></span>
+                  </button>
+               </div>
+            </div>
+         </ng-container>
+         <div class="home__row">
+            <p>Target:</p>
+            <mat-form-field appearance="fill" class="input-default">
+               <input matInput type="number" formControlName="target" />
+            </mat-form-field>
+         </div>
+
+         <div class="home__actions">
+            <button
+               class="dark-theme clear transparent"
+               id="test-button-add"
+               (click)="clear()"
+               mat-button
+            >
+               LIMPAR CAMPOS
+            </button>
+            <button
+               class="dark-theme pink combine"
+               mat-flat-button
+               id="test-combine-button"
+               (click)="combineValues()"
+            >
+               COMBINAR
+            </button>
+         </div>
+      </form>
+   </div>
+   <div class="mat-card home__card">
+      <h2>Combinações Possíveis</h2>
+      <div class="home__possible-comb">
+         <ng-container *ngIf="isValidCombination; else notCombined">
+            <ng-container *ngIf="!combinations.length; else combiners">
+               <mat-form-field
+                  *ngFor="let _ of [].constructor(4)"
+                  appearance="fill"
+                  class="input-default"
+               >
+                  <input matInput type="number" readonly />
+               </mat-form-field>
+            </ng-container>
+
+            <ng-template #combiners>
+               <ng-container *ngFor="let item of combinations">
+                  <mat-form-field appearance="fill" class="input-default">
+                     <input matInput type="number" [value]="item" readonly />
+                  </mat-form-field>
+               </ng-container>
+            </ng-template>
+         </ng-container>
+
+         <ng-template #notCombined>
+            <p>Não foi possivel gerar cobinações!</p>
+         </ng-template>
+      </div>
+   </div>
+   <div class="home__card home__images-card">
+      <button class="home__images-card-favorite pink">
+         <span class="icon-favorite"></span>
+      </button>
+      <p class="home__images-card-title">ENTRE EM CONTATO</p>
+   </div>
+   <div class="home__card home__images-card">
+      <button class="home__images-card-favorite pink">
+         <span class="icon-favorite"></span>
+      </button>
+      <p class="home__images-card-title">TEXTO AQUI</p>
+      <p class="home__images-card-subtitle">Exemplo</p>
+   </div>
+   <div class="home__card home__images-card">
+      <button class="home__images-card-favorite pink">
+         <span class="icon-favorite"></span>
+      </button>
+      <p class="home__images-card-title">REDES SOCIAIS</p>
+   </div>
+</section>

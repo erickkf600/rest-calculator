@@ -1,0 +1,194 @@
+@import './../../../styles/utils/variables';
+@import './../../../styles/utils/mixins';
+.content-side {
+   position: fixed;
+   width: 60px;
+   height: 100%;
+   overflow-x: hidden;
+   box-shadow: 0px 3px 12px $box-shadow;
+   @include respond-to('medium') {
+      width: 256px;
+   }
+   &__header {
+      padding: 39px 13px;
+      .logo {
+         font-size: 33px;
+         color: $dark-pink;
+         &:before {
+            content: '\e909';
+            font-family: 'icomoon';
+         }
+      }
+      @include respond-to('medium') {
+         padding: 39px 19px 0;
+         .logo {
+            &:before {
+               content: '\e908';
+            }
+         }
+      }
+      h1 {
+         margin-top: 34px;
+         color: $black;
+         letter-spacing: 0.15px;
+         line-height: 24px;
+         font: {
+            size: $header20px;
+            weight: $medium;
+         }
+         display: none;
+         @include respond-to('medium') {
+            display: block;
+         }
+      }
+      p {
+         color: $medium-gray;
+         line-height: 20px;
+         margin-bottom: 13px;
+         font: {
+            size: $text14px;
+            weight: $normal;
+         }
+         display: none;
+         @include respond-to('medium') {
+            display: block;
+         }
+      }
+   }
+
+   &__list {
+      li {
+         padding: 17px;
+         cursor: pointer;
+         @include transition(0.3s);
+         display: flex;
+         align-items: center;
+         line-height: 24px;
+         // color: $medium-gray;
+         margin-left: 2px;
+         letter-spacing: 0.1px;
+         font: {
+            size: $text14px;
+            weight: $medium;
+         }
+         &:hover,
+         &.active {
+            background: $pink-transparent;
+            color: $pink;
+         }
+         @include respond-to('medium') {
+            margin-left: 0;
+         }
+         span {
+            font-size: $text24px;
+            margin-right: 32px;
+         }
+         p {
+            display: none;
+            @include respond-to('medium') {
+               display: block;
+            }
+         }
+      }
+   }
+
+   &__footer {
+      position: absolute;
+      width: 100%;
+      bottom: 8px;
+
+      &-theme-selector {
+         width: 100%;
+         height: 100px;
+         position: absolute;
+         background: $gray;
+         width: 55%;
+         top: -115px;
+         height: 100px;
+         position: absolute;
+         left: 0;
+         right: 0;
+         margin: auto;
+         border-radius: $radius4;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         z-index: 2;
+         @include transition(0.3s);
+         @include transform(translateY(35%));
+         opacity: 0;
+         visibility: hidden;
+         &:before {
+            content: '';
+            position: absolute;
+            right: 1px;
+            margin: auto;
+            bottom: -15px;
+            border-top: 16px solid $gray;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            border-bottom: none;
+         }
+         @include respond-to('medium') {
+            &:before {
+               right: 42%;
+            }
+         }
+
+         button {
+            height: 100%;
+            background: transparent !important;
+            position: relative;
+            @include transition(0.3s);
+            font-weight: bold;
+            span {
+               display: none;
+               @include respond-to('medium') {
+                  display: block;
+               }
+            }
+
+            &:hover {
+               background: rgba(0, 0, 0, 0.05) !important;
+            }
+            &:before {
+               content: '';
+               position: absolute;
+               width: 20px;
+               aspect-ratio: 1/1;
+               box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.3);
+               background: linear-gradient(
+                  -45deg,
+                  $background,
+                  $background 49%,
+                  $pink 51%
+               );
+               left: 6px;
+               top: 12px;
+            }
+            @include respond-to('medium') {
+               &:before {
+                  left: 10px;
+                  width: 25px;
+               }
+            }
+
+            &:first-child {
+               &:before {
+                  background: linear-gradient(
+                     -45deg,
+                     $white,
+                     $white 49%,
+                     $dark-pink 51%
+                  );
+               }
+            }
+         }
+         &--show {
+            opacity: 1;
+            visibility: visible;
+            @include transform(translateY(0));
+         }
+      }
+   }
+}

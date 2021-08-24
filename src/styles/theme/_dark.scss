@@ -1,0 +1,55 @@
+$audaces-test-theme-dark: mat-dark-theme(
+   (
+      color: (
+         primary: $audaces-test-primary,
+         accent: $audaces-test-accent,
+         warn: $audaces-test-warn,
+      ),
+   )
+);
+
+.theme-dark {
+   @include angular-material-theme($audaces-test-theme-dark);
+   .logo,
+   h1 {
+      color: $clean-gray !important;
+   }
+   .mat-drawer-container,
+   button,
+   .mat-form-field-appearance-fill .mat-form-field-flex,
+   .selector {
+      background: $background !important;
+   }
+   .selector {
+      button {
+         color: $clean-gray !important;
+      }
+      &:before {
+         border-top: 16px solid $background !important;
+         border-right: 15px solid transparent;
+         border-left: 15px solid transparent;
+         border-bottom: none;
+      }
+   }
+   .mat-drawer,
+   .mat-card {
+      background: $background-sidenav !important;
+      color: $medium-gray;
+   }
+   .mat-form-field-label {
+      color: $input-label-dark !important;
+   }
+   .clear {
+      color: $medium-gray !important;
+      &.transparent {
+         background: transparent !important;
+      }
+   }
+   .pink {
+      color: $pink !important;
+   }
+   .combine {
+      background: $pink !important;
+      color: $background !important;
+   }
+}

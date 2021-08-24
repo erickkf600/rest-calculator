@@ -1,0 +1,81 @@
+@mixin border-radius($radius) {
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   -ms-border-radius: $radius;
+   border-radius: $radius;
+}
+
+@mixin box-shadow($top, $left, $blur, $distance, $rgba) {
+   -webkit-box-shadow: $top $left $blur $distance $rgba;
+   -moz-box-shadow: $top $left $blur $distance $rgba;
+   box-shadow: $top $left $blur $distance $rgba;
+}
+
+@mixin keyframes($animationName) {
+   @-webkit-keyframes #{$animationName} {
+      @content;
+   }
+   @-moz-keyframes #{$animationName} {
+      @content;
+   }
+   @-o-keyframes #{$animationName} {
+      @content;
+   }
+   @keyframes #{$animationName} {
+      @content;
+   }
+}
+
+@mixin transform($transforms) {
+   -moz-transform: $transforms;
+   -o-transform: $transforms;
+   -ms-transform: $transforms;
+   -webkit-transform: $transforms;
+   transform: $transforms;
+}
+
+@mixin transition($transition...) {
+   -moz-transition: $transition;
+   -o-transition: $transition;
+   -webkit-transition: $transition;
+   transition: $transition;
+}
+
+@mixin placeholder {
+   ::-webkit-input-placeholder {
+      @content;
+   }
+   :-moz-placeholder {
+      @content;
+   }
+   ::-moz-placeholder {
+      @content;
+   }
+   :-ms-input-placeholder {
+      @content;
+   }
+}
+@mixin respond-to($breakpoint) {
+   @if $breakpoint == 'device' {
+      @media (min-width: 576px) {
+         @content;
+      }
+   } @else if $breakpoint == 'small' {
+      // 767px
+      @media (min-width: 767px) {
+         @content;
+      }
+   } @else if $breakpoint == 'medium' {
+      @media (min-width: 1024px) {
+         @content;
+      }
+   } @else if $breakpoint == 'large' {
+      @media (min-width: 1200px) {
+         @content;
+      }
+   } @else if $breakpoint == 'extra-large' {
+      @media (min-width: 1500px) {
+         @content;
+      }
+   }
+}

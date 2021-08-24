@@ -1,0 +1,90 @@
+body,
+html {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+   font-family: $roboto;
+}
+a {
+   text-decoration: none;
+   color: black;
+   font-family: $roboto;
+}
+ol,
+ul,
+dl {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   font-family: $roboto;
+}
+button {
+   cursor: pointer;
+   border: none;
+   &:focus {
+      outline: none;
+      box-shadow: none;
+      border: none;
+   }
+}
+//CONTAINER
+.container {
+   width: 100%;
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: auto;
+   margin-left: auto;
+   @include respond-to('device') {
+      max-width: 540px;
+   }
+   @include respond-to('small') {
+      max-width: 720px;
+   }
+   @include respond-to('medium') {
+      max-width: 960px;
+   }
+   @include respond-to('large') {
+      max-width: 1140px;
+   }
+   @include respond-to('extra-large') {
+      max-width: 1300px;
+   }
+}
+
+button {
+   border: none;
+   background: transparent;
+   &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+   }
+}
+span {
+   background: transparent;
+}
+p,
+b,
+small {
+   margin: 0;
+   padding: 0;
+   background: transparent;
+   font-family: $roboto;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+   -moz-appearance: textfield;
+}

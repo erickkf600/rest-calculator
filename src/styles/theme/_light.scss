@@ -1,0 +1,13 @@
+$audaces-test-theme: mat-light-theme(
+   (
+      color: (
+         primary: $audaces-test-primary,
+         accent: $audaces-test-accent,
+         warn: $audaces-test-warn,
+      ),
+   )
+);
+
+.theme-light {
+   @include angular-material-theme($audaces-test-theme);
+}

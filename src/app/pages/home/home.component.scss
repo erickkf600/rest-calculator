@@ -1,0 +1,248 @@
+@import './../../../styles/utils/variables';
+@import './../../../styles/utils/mixins';
+
+.home {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-areas:
+      'label0'
+      'label1'
+      'label2'
+      'label3'
+      'label4';
+   row-gap: 26px;
+   column-gap: 30px;
+   height: 100%;
+   @include respond-to('medium') {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+         'label0 label0 label0 label0 label3'
+         'label1 label1 label1 label1 label3'
+         'label2 label2 label4 label4 label3';
+   }
+
+   &__card {
+      box-shadow: 0px 3px 6px $box-shadow;
+      border-radius: $radius4;
+      padding: 21px 0;
+      position: relative;
+
+      h2 {
+         letter-spacing: 0.15px;
+         padding: 0 15px;
+         font: {
+            weight: $bold;
+            size: $header20px;
+         }
+      }
+      @include respond-to('medium') {
+         padding: 21px 16px 20px 22px;
+         h2 {
+            padding: 0;
+         }
+      }
+
+      &:nth-child(1) {
+         grid-area: label0;
+      }
+
+      &:nth-child(2) {
+         grid-area: label1;
+         min-height: 150px;
+      }
+
+      &:nth-child(3) {
+         grid-area: label2;
+         height: 24vh;
+         display: flex;
+         background: linear-gradient(
+               180deg,
+               rgba(0, 0, 0, 0.2) 100%,
+               rgba(0, 0, 0, 1) 100%
+            ),
+            url('./../../../assets/images/Imagem 1.png') no-repeat center/cover;
+      }
+
+      &:nth-child(4) {
+         grid-area: label3;
+         display: flex;
+         background: linear-gradient(
+               180deg,
+               rgba(0, 0, 0, 0.2) 100%,
+               rgba(0, 0, 0, 1) 100%
+            ),
+            url('./../../../assets/images/Imagem 3.png') no-repeat center/cover;
+      }
+
+      &:nth-child(5) {
+         grid-area: label4;
+         display: flex;
+         background: linear-gradient(
+               180deg,
+               rgba(0, 0, 0, 0.2) 100%,
+               rgba(0, 0, 0, 1) 100%
+            ),
+            url('./../../../assets/images/Imagem 2.png') no-repeat center/cover;
+      }
+   }
+   &__sequencies {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__row {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 20px;
+      flex-direction: column;
+      padding: 15px;
+      p {
+         margin: 0 0 15px 0;
+         @include respond-to('medium') {
+            margin: 0 23px 0 0;
+         }
+      }
+      &:nth-child(2) {
+         p {
+            margin-right: 52px;
+         }
+      }
+      @include respond-to('medium') {
+         flex-direction: row;
+         align-items: center;
+         padding: 0;
+      }
+      &-grid {
+         display: grid;
+         grid-template-columns: 1fr;
+         overflow: hidden;
+         align-items: center;
+         gap: 25px;
+         width: 100%;
+         @include respond-to('medium') {
+            grid-template-columns: repeat(5, 1fr);
+         }
+      }
+   }
+   &__sequencies {
+      margin-top: 29px;
+   }
+
+   &__add {
+      background: $gray;
+      color: $black;
+      width: 56px;
+      height: 56px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include transition(0.3s);
+      margin: auto;
+      @include respond-to('medium') {
+         margin: 0;
+      }
+      &:hover {
+         background: darken($gray, 2%);
+      }
+      span {
+         font-size: 23px;
+      }
+   }
+
+   &__actions {
+      display: flex;
+      margin: 15px auto;
+      flex-direction: column-reverse;
+
+      @include respond-to('medium') {
+         margin: 26px 0 0 auto;
+         flex-direction: row;
+      }
+      button {
+         background: $dark-pink;
+         color: $white;
+         letter-spacing: 1.25px;
+         font: {
+            size: $text14px;
+            weight: $medium;
+         }
+         &:first-child {
+            margin: 15px 0 0;
+            background: transparent;
+            color: $black;
+            @include respond-to('medium') {
+               margin: 0 25px 0 0;
+            }
+         }
+      }
+   }
+
+   &__possible-comb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0;
+      flex-flow: column wrap;
+      padding: 15px;
+      .input-default {
+         margin: 25px 0 0 0;
+      }
+      @include respond-to('medium') {
+         flex-flow: row wrap;
+         margin-top: 29px;
+         padding: 0;
+         .input-default {
+            margin: 0 25px 0 0;
+         }
+      }
+   }
+
+   &__images-card {
+      &-title,
+      &-subtitle {
+         padding: 0 15px;
+         max-width: 224px;
+         color: $white;
+         letter-spacing: 3.48px;
+         line-height: 45px;
+         font: {
+            weight: $medium;
+            size: $text41px;
+         }
+      }
+      &-subtitle {
+         font-size: $text20px;
+      }
+      &:nth-child(3) {
+         align-items: flex-end;
+      }
+      &:nth-child(4) {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         text-align: left;
+         @include respond-to('medium') {
+            text-align: center;
+         }
+      }
+
+      &-favorite {
+         width: 42px;
+         height: 42px;
+         border-radius: $radius100;
+         background: $white;
+         color: $pink;
+         text-align: center;
+         position: absolute;
+         top: 15px;
+         right: 10px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         span {
+            font-size: 22px;
+         }
+      }
+   }
+}

@@ -1,27 +1,73 @@
-# AudacesTest
+# Audaces Teste
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.13.
+### Aplicação desenvolvida com Angular v11.2.14
 
-## Development server
+![GitHub repo size](https://img.shields.io/github/repo-size/erickkf600/Audaces-test?style=for-the-badge)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Desenvolvimento de uma aplicação que deve checar se é possível atingir o número alvo com uma combinação das pontuações e, se possível, retornar essa combinação.
 
-## Code scaffolding
+Foi feito também implementação de tema dark
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### DARK
+<p float="left" align="center">
+<img src="./src/assets/preview/dark.png" alt="Preview" width="75%">
+<img src="./src/assets/preview/dark-mobile.PNG" alt="Preview" width="15%">
+</p>
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### LIGHT
+<p float="left" align="center">
+<img src="./src/assets/preview/light.png" alt="Preview" width="75%">
+<img src="./src/assets/preview/light-mobile.PNG" alt="Preview" width="15%">
+</p>
 
-## Running unit tests
+<br/>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Iniciando o App
 
-## Running end-to-end tests
+- Clone o repositório 
+- Dentro da pasta clonada rode o commando
+```
+npm install
+```
+- finalizada a instalação rode o comando
+```
+ng serve 
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Libs Utilizadas
+* [@angular/material](https://material.angular.io/)
 
-## Further help
+#### DEV
+* [jest](https://jestjs.io)
+* [husky](https://typicode.github.io/husky/#/)
+* [prettier](https://prettier.io/)
+* [eslint](https://eslint.org/)
+* [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* [EsLint - Plugins](#EsLintPlugins)
+  * [slint-config-prettier]()
+  * [eslint-plugin-import]()
+  * [eslint-plugin-prettier]()
+  * [eslint-plugin-security]()
+  * [eslint-plugin-unused-imports]()
+  * [Table](#table)
+  
+
+<br/><br/>
+
+## Responsavel
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars3.githubusercontent.com/u/35529628" width="100px;" alt="Foto do Erick Ferreira no GitHub"/><br>
+        <sub>
+          <b>Erick Ferreira</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+

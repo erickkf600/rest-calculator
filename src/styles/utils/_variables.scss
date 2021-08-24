@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+// COLORS PALETTE
+
+//DARK THEME
+$background: #292929;
+$background-sidenav: #2f2f2f;
+$clean-pink: #ffb7d9;
+$medium-pink: #eec3d7;
+$clean-gray: #e4e4e4;
+$medium-gray: #acacac;
+$input-label-dark: #FFFFFF99;
+
+//LIGHT THEME
+$dark-pink: #e63a8a;
+$gray: #eaeaea;
+$dark-gray: #00000099;
+$dark-shade1: #000000cc;
+$dark-shade2: #000000bf;
+
+//USED IN BOTH
+$pink-transparent: #ffb7d91f;
+$pink: #ff96c7;
+$white: #fff;
+$black: #000;
+
+//util
+$box-shadow: #00000029;
+
+//Radius
+$radius100: 100%;
+$radius25: 25px;
+$radius15: 15px;
+$radius10: 10px;
+$radius5: 5px;
+$radius4: 4px;
+
+//-------------------//
+//       FONTS       //
+//-------------------//
+$roboto: 'Roboto', sans-serif;
+
+//WEIGTH
+$light: 100;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+$extra-bold: 900;
+
+
+// Font Sizing
+$header60px: 3.75rem;
+$header54px: 3.375rem;
+$header48px: 3rem;
+$header42px: 2.652rem;
+$header36px: 2.25rem;
+$header32px: 2rem;
+$header28px: 1.75rem;
+$header26px: 1.6rem;
+$header24px: 1.5rem;
+$header22px: 1.375rem;
+$header20px: 1.25rem;
+$header18px: 1.12rem;
+
+$text41px: 2.563rem;
+$text36px: 2.25rem;
+$text32px: 2rem;
+$text27px: 1.688rem;
+$text24px: 1.333rem;
+$text20px: 1.25rem;
+$text18px: 1.125rem;
+$text16px: 1rem;
+$text14px: 0.888rem;
+$text13px: 0.813rem;
+$text12px: 0.666rem;
+$text10px: 0.444rem;

@@ -1,0 +1,54 @@
+<section class="content-side">
+   <div class="content-side__header">
+      <span class="icon-audaces-logo logo theme-dark"></span>
+
+      <h1 class="theme-dark title">Roboto-Medium 20px</h1>
+      <p>Roboto-Regular 14px</p>
+   </div>
+
+   <div class="content-side__pages">
+      <ul class="content-side__list">
+         <li>
+            <span class="icon-home"></span>
+            <p>Teste Audaces</p>
+         </li>
+         <li>
+            <span class="icon-data"></span>
+            <p>Exemplo 1</p>
+         </li>
+         <li>
+            <span class="icon-saw"></span>
+            <p>Exemplo 2</p>
+         </li>
+         <li>
+            <span class="icon-filter"></span>
+            <p>Exemplo 3</p>
+         </li>
+      </ul>
+   </div>
+   <div class="content-side__footer">
+      <div
+         class="content-side__footer-theme-selector dark-theme selector"
+         [ngClass]="{
+            'content-side__footer-theme-selector--show': showThemeMenu
+         }"
+      >
+         <button (click)="toggleTheme.emit('theme-light')">
+            <span>Light</span>
+         </button>
+         <button (click)="toggleTheme.emit('theme-dark')">
+            <span>Dark</span>
+         </button>
+      </div>
+      <ul class="content-side__list">
+         <li (click)="showThemeMenu = !showThemeMenu">
+            <span class="icon-theme"></span>
+            <p>Trocar de tema</p>
+         </li>
+         <li>
+            <span class="icon-user"></span>
+            <p>Username</p>
+         </li>
+      </ul>
+   </div>
+</section>
